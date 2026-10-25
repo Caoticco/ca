@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finalizar pedido | CAOTICCO</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="assets/img/logo-estrella.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261019a">
+</head>
+<body>
+<!--@HEADER-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 1.5l3.1 6.9 7.4.8-5.6 5 1.6 7.4L12 17.8l-6.5 3.8 1.6-7.4-5.6-5 7.4-.8z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-9 6-14 15-14 0 9-5 15-14 15"/><path d="M5 19l7-7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h14l-3-3M20 16H6l3 3"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path d="M3 10h18v4H3zM5 14h14v7H5zM12 10v11"/><path d="M12 10c-2 0-5-1-5-3s3-2 5 3c2-5 5-5 5-3s-3 3-5 3z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.3c0-.1-.2-.2-.4-.3z"/></symbol>
+</svg>
+
+<div class="announce"><a href="cape.html">Preventa Cape CCC-0 abierta</a> <span>· Envío gratis desde $250.000</span></div>
+
+<header class="header">
+  <div class="wrap header__in">
+    <a class="logo" href="index.html" aria-label="CAOTICCO, inicio"><img src="assets/img/logo-estrella.webp" alt="" width="30" height="30">CAOTICCO</a>
+    <nav class="nav" aria-label="Principal">
+      <a class="nav__hot" href="cape.html"><svg class="star"><use href="#i-star"/></svg>Cape CCC-0</a>
+      <a href="index.html#tienda">Tienda</a>
+      <a href="index.html#historia">Historia</a>
+      <a href="index.html#encargos">Piezas 1 de 1</a>
+      <a href="index.html#ayuda">Ayuda</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn" type="button" data-open-cart aria-label="Abrir carrito">
+        <svg><use href="#i-bag"/></svg><span class="cart-count" data-n="0">0</span>
+      </button>
+      <button class="icon-btn menu-btn" type="button" aria-label="Menú" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+<!--@/HEADER-->
+
+<main class="wrap">
+  <!-- carrito vacío -->
+  <div class="done" id="co-empty" hidden>
+    <svg class="star"><use href="#i-star"/></svg>
+    <h1>Tu carrito está vacío</h1>
+    <p class="muted">Aún no has elegido nada. Empieza por la pieza del drop.</p>
+    <a class="btn btn--red" href="cape.html" style="margin-top:16px">Ver la Cape CCC-0</a>
+  </div>
+
+  <!-- formulario -->
+  <div class="co" id="co-main">
+    <form id="checkout" novalidate>
+      <h1>Finalizar pedido</h1>
+      <div class="steps"><b>1 · Tus datos</b><span>2 · Pago</span><span>3 · Confirmación por WhatsApp</span></div>
+
+      <fieldset class="fieldset">
+        <legend>Contacto</legend>
+        <div class="grid2">
+          <div class="field"><label for="f-nombre">Nombre completo</label><input id="f-nombre" name="nombre" autocomplete="name" required><span class="err"></span></div>
+          <div class="field"><label for="f-cel">Celular (WhatsApp)</label><input id="f-cel" name="celular" type="tel" inputmode="tel" autocomplete="tel" placeholder="300 123 4567" required><span class="err"></span></div>
+          <div class="field field--full"><label for="f-correo">Correo (opcional)</label><input id="f-correo" name="correo" type="email" autocomplete="email"><span class="err"></span></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>Envío</legend>
+        <div class="grid2">
+          <div class="field"><label for="f-ciudad">Ciudad</label><input id="f-ciudad" name="ciudad" autocomplete="address-level2" required><span class="err"></span></div>
+          <div class="field"><label for="f-depto">Departamento</label>
+            <select id="f-depto" name="depto" autocomplete="address-level1">
+              <option value="">Elige…</option>
+              <option>Bogotá D.C.</option><option>Antioquia</option><option>Valle del Cauca</option><option>Cundinamarca</option><option>Atlántico</option><option>Santander</option><option>Bolívar</option><option>Risaralda</option><option>Caldas</option><option>Quindío</option><option>Tolima</option><option>Huila</option><option>Boyacá</option><option>Nariño</option><option>Norte de Santander</option><option>Meta</option><option>Córdoba</option><option>Magdalena</option><option>Cesar</option><option>Cauca</option><option>Otro</option>
+            </select><span class="err"></span></div>
+          <div class="field field--full"><label for="f-dir">Dirección completa</label><input id="f-dir" name="direccion" autocomplete="street-address" placeholder="Calle, número, apto o casa, barrio" required><span class="err"></span></div>
+          <div class="field field--full"><label for="f-notas">Notas para el pedido (opcional)</label><textarea id="f-notas" name="notas" placeholder="Ej: entregar en portería, horario…"></textarea></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>Pago</legend>
+        <div class="pay" id="pay"></div>
+      </fieldset>
+    </form>
+
+    <aside class="summary">
+      <h2>Resumen</h2>
+      <div id="sum-items"></div>
+      <div class="sum-row" style="margin-top:10px"><span>Subtotal</span><span id="sum-sub">$0</span></div>
+      <div class="sum-row"><span>Envío</span><span id="sum-ship">—</span></div>
+      <div class="sum-row sum-row--total"><span>Total</span><span id="sum-total">$0</span></div>
+      <button class="btn btn--red btn--block" type="submit" form="checkout">Confirmar pedido</button>
+      <small>Al confirmar se abre WhatsApp con tu pedido listo para enviar. Allí te confirmamos disponibilidad y pago.</small>
+    </aside>
+  </div>
+
+  <!-- confirmación -->
+  <div class="done" id="co-done" hidden>
+    <svg class="star"><use href="#i-star"/></svg>
+    <h1>¡Pedido creado!</h1>
+    <p>Tu número de pedido es</p>
+    <div class="order-id" id="order-id">CC-000000</div>
+    <p class="muted">Si WhatsApp no se abrió solo, toca el botón para enviarnos el pedido. Te respondemos con los datos de pago y la fecha de despacho.</p>
+    <div class="hero__ctas" style="justify-content:center;margin-top:20px">
+      <a class="btn btn--wa" id="order-wa" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enviar pedido por WhatsApp</a>
+      <a class="btn btn--ghost" href="index.html">Volver a la tienda</a>
+    </div>
+  </div>
+</main>
+
+<!--@FOOTER-->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html"><img src="assets/img/logo-estrella.webp" alt="" width="30" height="30">CAOTICCO</a>
+        <p style="margin-top:16px;max-width:22em">Streetwear transformable y sostenible, hecho en Colombia.</p>
+      </div>
+      <div><p class="footer__h">Tienda</p><ul><li><a href="cape.html">Cape CCC-0</a></li><li><a href="index.html#tienda">Todos los productos</a></li><li><a href="index.html#encargos">Piezas 1 de 1</a></li></ul></div>
+      <div><p class="footer__h">Ayuda</p><ul><li><a href="index.html#ayuda">Envíos y pagos</a></li><li><a href="index.html#ayuda">Cambios de talla</a></li><li><a data-wa="Hola CAOTICCO ★ Tengo una pregunta." href="#">WhatsApp</a></li></ul></div>
+      <div><p class="footer__h">Síguenos</p><ul><li><a href="https://instagram.com/caoticco_" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://tiktok.com/@_caoticco" target="_blank" rel="noopener">TikTok</a></li></ul></div>
+    </div>
+    <svg class="footer__big" viewBox="0 0 1000 150" aria-hidden="true" focusable="false"><text x="2" y="132" textLength="996" lengthAdjust="spacingAndGlyphs">CAOTICCO</text></svg>
+    <div class="footer__legal"><span>© <span data-year>2026</span> CAOTICCO · Hecho en Colombia</span><span>Términos · Privacidad · Cambios y devoluciones</span></div>
+  </div>
+</footer>
+
+<div class="drawer-bg" data-close-cart></div>
+<aside class="drawer" aria-label="Carrito de compras">
+  <div class="drawer__head"><h2>Tu carrito</h2><button class="icon-btn" type="button" data-close-cart aria-label="Cerrar carrito"><svg><use href="#i-x"/></svg></button></div>
+  <div class="drawer__ship"><span id="cart-ship">Envío gratis desde $250.000</span><div class="bar"><i id="cart-bar"></i></div></div>
+  <div class="drawer__items" id="cart-items"><div class="drawer__empty"><p>Tu carrito está vacío.</p></div></div>
+  <div class="drawer__foot" id="cart-foot" hidden>
+    <div class="sum-row"><span>Subtotal</span><span id="cart-sub">$0</span></div>
+    <div class="sum-row"><span>Envío</span><span id="cart-shipv">—</span></div>
+    <div class="sum-row sum-row--total"><span>Total</span><span id="cart-total">$0</span></div>
+    <a class="btn btn--red btn--block" href="checkout.html">Finalizar pedido</a>
+    <button class="btn btn--ghost btn--block" type="button" data-close-cart>Seguir comprando</button>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"><svg class="star"><use href="#i-star"/></svg><span></span></div>
+
+<script defer src="lib/manifest.js?v=20261019a"></script>
+<script defer src="main.js?v=20261019a"></script>
+<!--@/FOOTER-->
+</body>
+</html>
